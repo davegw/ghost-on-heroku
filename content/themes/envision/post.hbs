@@ -7,7 +7,7 @@
 
 <header id="head-wsong">
 	{{> menu}}
-	
+
 	<div id="mobile-menu-btn-wsong"><span class="fa fa-reorder"></span></div>
 
 	<div id="inside-head-wsong">
@@ -21,31 +21,33 @@
 			<time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="LL"}}</time>
 			{{tags separator=" "}}
 		</div>
-		
+
 	</div>
 </header>
 
 <section id="in-post-content">
-	{{content}}
+{{! No indention to prevent handlebars indenting <pre> tag content}}
+{{! https://github.com/roryg/ghostwriter/pull/65}}
+{{content}}
 </section>
 
 <footer id="in-post-footer">
 	<section class="share-post">
 		<span class="share-label">SHARE ON:</span>
-		<a href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}" 
+		<a href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"
 		onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;"
 		class="fa fa-twitter"> <span>Twitter</span></a>
-		<a href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}" 
+		<a href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
 		onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;"
 		class="fa fa-facebook"> <span>Facebook</span></a>
-		<a href="https://plus.google.com/share?url={{url absolute="true"}}" 
-		onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" 
+		<a href="https://plus.google.com/share?url={{url absolute="true"}}"
+		onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;"
 		class="fa fa-google-plus"> <span>Google+</span></a>
 	</section>
 
 	<section class="jump-to-posts">
 		<h3>More from {{@blog.title}}</h3>
-		
+
 		{{#next_post}}
 		<article class="more-from-blog next-post">
 			<h4>{{title}}</h4>

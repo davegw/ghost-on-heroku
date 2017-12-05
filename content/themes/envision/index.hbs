@@ -12,19 +12,19 @@
 		{{#if @blog.cover_image}}
 		<div id="inside-head-cover-wsong" style="background-image:url({{@blog.cover_image}});"></div>
 		{{/if}}
-	
+
 		{{#if @blog.logo}}
 		<img id="index-logo-wsong" class="diffuse-elements" src="{{@blog.logo}}" alt="{{@blog.title}} Logo">
 		{{else}}
 		<h1 id="blog-title-wsong" class="diffuse-elements">{{@blog.title}}</h1>
 		{{/if}}
-		
+
 		<br>
 
 		<p id="index-description-wsong" class="diffuse-elements">
 			{{@blog.description}}
 		</p>
-		
+
 	</div>
 </header>
 
@@ -34,8 +34,9 @@
 </div>
 
 <main id="post-feed-wsong">
+{{! Loop of posts for current page}}
+{{! No indention to prevent handlebars indenting <pre> tag content}}
+{{! https://github.com/roryg/ghostwriter/pull/65}}
+{{> loop}}
 
-	{{! Loop of posts for current page}}
-	{{> loop}}
-	
 </main>
