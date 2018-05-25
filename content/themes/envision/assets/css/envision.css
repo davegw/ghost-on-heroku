@@ -1,5 +1,5 @@
 /* 	Envision - Ghost Theme
-*	
+*
 *	AFTERTYPE.COM
 *
 *	v1.0.1
@@ -795,6 +795,8 @@ nav.pagination .older-posts {
 }
 #in-post-content pre code {
   background-color: transparent;
+  /* Remove leading padding in code tag inside pre block */
+  padding: 0px;
 }
 #in-post-content blockquote {
   border-left: 6px solid #373737;
