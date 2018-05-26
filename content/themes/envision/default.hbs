@@ -27,7 +27,14 @@
 	<link rel="stylesheet" type="text/css" href="https://cdn.aftertype.com/css/envision.css" />
 
 	{{! Override styling on pre code block to remove leading space on first line }}
-	<style>#in-post-content pre code {padding: 0px}</style>
+	<style>
+		html {
+			background-color: #151515;
+		}
+		#in-post-content pre code {
+			padding: 0px;
+		}
+	</style>
 
 	{{! Ghost OUTPUT Data}}
 	{{ghost_head}}
